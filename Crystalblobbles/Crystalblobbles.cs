@@ -35,16 +35,17 @@ public sealed partial class Crystalblobbles : Mod, ITogglableMod {
 		Instance = null;
 	}
 
-	private static string Localize(string key, string sheet, string orig) => sheet switch {
-		_ when running is false => orig,
-		"Journal" when key is "NAME_OBLOBBLE" => "Name".Localize(),
-		"CP3" when key is "GG_S_BIGBEES" => "Desc".Localize(),
-		"Titles" => key switch {
-			"OBLOBBLES_SUPER" => "Title/Super".Localize(),
-			"OBLOBBLES_MAIN" => "Title/Main".Localize(),
-			"OBLOBBLES_SUB" => "Title/Sub".Localize(),
+	private static string Localize(string key, string sheet, string orig) =>
+		running || GameManager.instance.sceneName == "GG_Workshop"
+		? sheet switch {
+			"Journal" when key is "NAME_OBLOBBLE" => "Name".Localize(),
+			"CP3" when key is "GG_S_BIGBEES" => "Desc".Localize(),
+			"Titles" => key switch {
+				"OBLOBBLES_SUPER" => "Title/Super".Localize(),
+				"OBLOBBLES_MAIN" => "Title/Main".Localize(),
+				"OBLOBBLES_SUB" => "Title/Sub".Localize(),
+				_ => orig,
+			},
 			_ => orig,
-		},
-		_ => orig,
-	};
+		} : orig;
 }
