@@ -4,13 +4,13 @@ global using System.Linq;
 global using System.Reflection;
 global using System.Runtime.CompilerServices;
 
-global using Crystalblobbles.Util;
+global using Crystalblobbles.Utils;
 
 global using HutongGames.PlayMaker;
 
 global using Modding;
 
-global using Newtonsoft.Json;
+global using Osmi.Utils;
 
 global using Satchel;
 

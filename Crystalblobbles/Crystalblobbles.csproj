@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyTitle>Crystalblobbles</AssemblyTitle>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<Authors>Clazex</Authors>
 
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -70,6 +70,10 @@
 		</Reference>
 		<Reference Include="Satchel">
 			<HintPath>$(HKModRefs)/Satchel/Satchel.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="Osmi">
+			<HintPath>$(HKModRefs)/Osmi/Osmi.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
 	</ItemGroup>
