@@ -55,7 +55,7 @@ public sealed partial class Crystalblobbles {
 			.ForEach(action => action.gameObject.Value = crystalShot);
 
 		if (BossSceneController.Instance.BossLevel == 0) {
-			oblobbles.Map(go => go.manageHealth(900));
+			_ = oblobbles.Map(go => go.manageHealth(900));
 
 			oblobbles.Map(go => go.LocateMyFSM("Set Rage").FsmVariables)
 				.ForEach(vars => {
@@ -63,7 +63,7 @@ public sealed partial class Crystalblobbles {
 					vars.FindFsmInt("HP Max").Value = 1000;
 				});
 		} else {
-			oblobbles.Map(go => go.manageHealth(1100));
+			_ = oblobbles.Map(go => go.manageHealth(1100));
 
 			oblobbles.Map(go => go.LocateMyFSM("Set Rage").FsmVariables)
 				.ForEach(vars => {

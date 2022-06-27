@@ -24,7 +24,7 @@ public sealed partial class Crystalblobbles {
 		ms.Close();
 
 		Texture2D texture2D = new(2, 2);
-		texture2D.LoadImage(bytes, true);
+		_ = texture2D.LoadImage(bytes, true);
 
 		return texture2D;
 	});
@@ -47,6 +47,6 @@ public sealed partial class Crystalblobbles {
 		crystalShot = crystalHunter
 			.GetComponent<PersonalObjectPool>()
 			.startupPool[0].prefab;
-		crystalShot.AddComponent<CrystalMarker>();
+		_ = crystalShot.AddComponent<CrystalMarker>();
 	}
 }
