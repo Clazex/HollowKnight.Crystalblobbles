@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyTitle>Crystalblobbles</AssemblyTitle>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Authors>Clazex</Authors>
 
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -33,6 +33,13 @@
 
 	<ItemGroup>
 		<EmbeddedResource Include="Resources/**" />
+
+		<None Include="../.editorconfig" />
+		<None Include="../.gitignore" />
+		<None Include="../LICENSE" />
+		<None Include="../package.json" />
+		<None Include="../README.md" />
+		<None Include="../README.zh.md" />
 	</ItemGroup>
 
 	<ItemGroup>
