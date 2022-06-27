@@ -10,6 +10,7 @@ global using HutongGames.PlayMaker;
 
 global using Modding;
 
+global using Osmi;
 global using Osmi.Utils;
 
 global using Satchel;
